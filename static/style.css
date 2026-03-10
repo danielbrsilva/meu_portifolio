@@ -1,0 +1,226 @@
+/* IMPORTAR FONTE MODERNA */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #eef2f7);
+    color: #1f2937;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+nav {
+    background: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #2563eb;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 80px auto;
+    text-align: center;
+    flex: 1;
+}
+
+/* TITULO */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* PERFIL */
+.perfil p:first-child {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #2563eb;
+}
+
+.perfil p:last-child {
+    color: #6b7280;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+/* BOTÕES */
+button,
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    border: none;
+    color: white;
+    padding: 14px 32px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+button:hover,
+.btn:hover {
+    background: #1e40af;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* BOTÕES VERTICAIS */
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+/* LISTA DE PROJETOS */
+ul {
+    list-style: none;
+    margin-top: 50px;
+}
+
+ul li {
+    background: white;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    max-width: 700px;
+}
+
+ul li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul li h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #111827;
+}
+
+ul li p {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 550px;
+    margin: 50px auto;
+}
+
+input, textarea {
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: white;
+    font-size: 0.85rem;
+    color: #6b7280;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.04);
+}
+
+/* HERO / INÍCIO */
+
+.hero {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.cargo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+.descricao {
+    color: #6b7280;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 35px;
+}
+
+/* BOTÃO DA HERO */
+
+.hero-botoes {
+    margin-top: 20px;
+}

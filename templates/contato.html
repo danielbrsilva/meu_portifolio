@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Contato</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/projetos">Projetos</a>
+        <a href="/contato">Contato</a>
+    </nav>
+
+    <main class="container">
+        <h1>Enviar Mensagem</h1>
+        <form method="POST">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu email" required>
+            <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    
+    <footer>
+        2026 © Daniel Portfólio
+    </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Meus Projetos</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/projetos">Projetos</a>
+        <a href="/contato">Contato</a>
+    </nav>
+
+    <main class="container">
+        <h1>Repositório de Missões</h1>
+        <ul>
+            {% for p in projetos %}
+            <li>
+                <a href="/projeto/{{ p.id }}">
+                    <h3>{{ p.nome }}</h3>
+                    <p>Tech: {{ p.tecnologia }}</p>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        2026 Conexão Estabelecida - Daniel Portifólio Perfeito
+    </footer>
+</body>
+</html>

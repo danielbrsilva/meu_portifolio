@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Detalhes do Projeto</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/projetos">Projetos</a>
+        <a href="/contato">Contato</a>
+    </nav>
+
+    <main class="container">
+        {% if projeto %}
+            <h1>{{ projeto.nome }}</h1>
+            <p><strong>Tecnologia Utilizada:</strong> {{ projeto.tecnologia }}</p>
+            <p style="margin: 20px 0;">{{ projeto.desc }}</p>
+            <div class="botoes">
+                <a href="{{ projeto.github }}" target="_blank" class="btn">VER NO GITHUB</a>
+                <button onclick="window.location.href='/projetos'">VOLTAR AO REPOSITÓRIO</button>
+            </div>
+        {% else %}
+            <h1>PROJETO NÃO LOCALIZADO</h1>
+            <button onclick="window.location.href='/projetos'">VOLTAR</button>
+        {% endif %}
+    </main>
+
+    <footer>
+        2026 Conexão Estabelecida - Daniel Portifólio Perfeito
+    </footer>
+</body>
+</html>
